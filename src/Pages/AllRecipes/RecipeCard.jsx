@@ -18,7 +18,7 @@ const RecipeCard = ({ recipe }) => {
     <div>
       <div className="card rounded-lg lg:card-side bg-base-100 shadow-xl gap-2 px-10 py-4">
         <figure>
-          <img className="w-96 h-72 rounded-lg" src={image} alt="Album" />
+          <img className="w-96 h-72 rounded-lg hover:scale-[1.07] duration-1000" src={image} alt="Album" />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-4xl font-semibold">{name} ({category}) </h2>

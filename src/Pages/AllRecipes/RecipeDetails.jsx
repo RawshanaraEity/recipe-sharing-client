@@ -1,6 +1,10 @@
 
+import { useState } from "react";
 import useSingleRecipe from "../../Hooks/useSingleRecipe";
 import MoreRecipes from "./MoreRecipes";
+import { AiFillLike, AiFillDislike } from "react-icons/ai";
+import toast from "react-hot-toast";
+
 
 
 
@@ -22,6 +26,27 @@ const RecipeDetails = () => {
       } = recipe;
     console.log(recipe);
 
+    const [liked, setLiked] = useState(false);
+    const [disliked, setDisliked] = useState(false);
+  
+    const handleLikeClick = () => {
+      setLiked(true);
+      setDisliked(false);
+      showToast("Liked");
+    };
+  
+    const handleDislikeClick = () => {
+      setDisliked(true);
+      setLiked(false);
+      showToast("Disliked");
+    };
+  
+    const showToast = (message) => {
+      toast.success(message, {
+        autoClose: 2000,
+      });
+    };
+
 
 
     return (
@@ -32,6 +57,21 @@ const RecipeDetails = () => {
           <figure>
             <img className="w-full h-96 rounded-lg" src={image} alt="Album" />
           </figure>
+          <div className="flex justify-end items-center gap-6 text-green-700 text-xl">
+              <button
+                className={liked ? "text-green-600" : "text-gray-400"}
+                onClick={handleLikeClick}
+              >
+                <AiFillLike />
+              </button>
+              <button
+                className={disliked ? "text-rose-600" : "text-gray-400"}
+                onClick={handleDislikeClick}
+              >
+                <AiFillDislike />
+              </button>
+           
+            </div>
           <div className="card-body pt-5">
             <h2 className="card-title text-4xl font-semibold">{name} ({category})</h2>
             <h3 className="text-xl font-medium">Country Origin: {country}</h3>
