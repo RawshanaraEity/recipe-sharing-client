@@ -12,6 +12,7 @@ import AllRecipes from './Pages/AllRecipes/AllRecipes';
 import AddRecipe from './Pages/AddRecipe/AddRecipe';
 import AuthProvider from './Providers/AuthProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import RecipeDetails from './Pages/AllRecipes/RecipeDetails';
 
 
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/add-Recipes",
         element: <AddRecipe/>
+      },
+      {
+        path: "/recipe-details/:id",
+        element: <RecipeDetails/>
       }
     ]
   },

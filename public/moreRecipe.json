@@ -1,0 +1,61 @@
+[
+    {
+        "image": "https://i.ibb.co/XsVyc3T/ikhsan-baihaqi-pbc2w-Xb-QYp-I-unsplash.jpg",
+        "name": "Hot And Spicy Spaghetti ",
+        "details": "A traditional Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+        "video": "https://example.com/videos/spaghetti_carbonara.mp4",
+        "country": "Italy",
+        "category": "Pasta",
+        "email": "chef.italiano@example.com",
+        "watchCount": 1524,
+        "purchased_by": ["user1@example.com", "user2@example.com"]
+    },
+   
+    {
+        "image": "https://i.ibb.co/ZdBX3vm/GCCR11.jpg",
+        "name": "Salmon Fish Fry Rolls",
+        "details": "Delicious sushi rolls with fresh fish, vegetables, and seasoned rice, wrapped in seaweed.",
+        "video": "https://example.com/videos/sushi_rolls.mp4",
+        "country": "Japan",
+        "category": "Seafood",
+        "email": "chef.japan@example.com",
+        "watchCount": 1987,
+        "purchased_by": ["user5@example.com", "user6@example.com"]
+    },
+    
+    {
+        "image": "https://i.ibb.co/Z2xYKT4/Grilled-Five-Spice-Chicken1.jpg",
+        "name": "Tanduri Chicken ",
+        "details": "Juicy pieces of chicken marinated in spices and fried to a golden crisp.",
+        "video": "https://example.com/videos/chicken_fry.mp4",
+        "country": "USA",
+        "category": "Fried",
+        "email": "chef.chickenfry@example.com",
+        "watchCount": 2398,
+        "purchased_by": ["user39@example.com", "user40@example.com"]
+    },
+   
+    {
+        "image": "https://i.ibb.co/3cTfBQp/pastopizza02.jpg",
+        "name": "Cheese Soses Pizza",
+        "details": "A simple yet delicious pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves.",
+        "video": "https://example.com/videos/margherita_pizza.mp4",
+        "country": "Italy",
+        "category": "Pizza",
+        "email": "chef.pizza@example.com",
+        "watchCount": 1897,
+        "purchased_by": ["user25@example.com", "user26@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/vcSj4JS/Choclate-Earl.jpg",
+        "name": "Choklet Tiramisu",
+        "details": "A traditional Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa.",
+        "video": "https://example.com/videos/tiramisu.mp4",
+        "country": "Italy",
+        "category": "Dessert",
+        "email": "chef.dessert@example.com",
+        "watchCount": 1724,
+        "purchased_by": ["user21@example.com", "user22@example.com"]
+    }
+
+]
