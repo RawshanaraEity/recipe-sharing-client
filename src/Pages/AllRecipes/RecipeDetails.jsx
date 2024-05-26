@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+
 import useSingleRecipe from "../../Hooks/useSingleRecipe";
-import AllRecipes from "./AllRecipes";
+import MoreRecipes from "./MoreRecipes";
+
+
+
 
 
 const RecipeDetails = () => {
@@ -22,9 +25,9 @@ const RecipeDetails = () => {
 
 
     return (
-       <div>
+       <div className="grid grid-cols-5">
+        <div  className="col-span-3">
         <div>
-        <div className="w-8/12">
         <div className="card rounded-lg bg-base-100 shadow-xl gap-2 px-10 py-10">
           <figure>
             <img className="w-full h-96 rounded-lg" src={image} alt="Album" />
@@ -41,16 +44,13 @@ const RecipeDetails = () => {
                 <li key={index}> {item}</li>
               )) }
             </ul>
-            <div className="card-actions justify-start mt-3">
-              
-            </div>
           </div>
         </div>
       </div>
         </div>
-        <div>
+        <div className="col-span-2">
             <div>
-                
+               <MoreRecipes/>
             </div>
         </div>
        </div>
