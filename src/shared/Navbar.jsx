@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
 import logo from '../assets/Image/4-removebg-preview.png'
+import SocialLogin from "../components/socialLogin/SocialLogin";
+import useAuth from "../Hooks/useAuth";
+import { BsCoin } from "react-icons/bs";
+import { MdOutlineStars } from "react-icons/md";
 
 
 const Navbar = () => {
-
+  const { logOut, user } = useAuth();
 
   const navLinks = (
     <>
@@ -67,16 +71,13 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm bg-black dropdown-content mt-3 z-[1] p-2 shadow 
-               rounded-box w-36 "
+              className="menu menu-sm z-10 bg-black dropdown-content mt-3 p-2 shadow rounded-b-lg w-32 "
             >
               {navLinks}
             </ul>
           </div>
-          <div className=" flex items-center">
-            <img src={logo} className="h-20" alt="" />
-           
-            
+          <div className="flex items-center">
+            <img src={logo} className="h-14 md:h-20" alt="" />
           </div>
 
         </div>
@@ -86,24 +87,28 @@ const Navbar = () => {
 
 
         <div className="navbar-end">
-          {/* {user?.email ? ( */}
+          {user?.email ? (
             <div>
             <div className="hidden md:block">
-            <div className=" flex gap-2">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="flex items-center gap-2">
+            
+                {/* <p className="text-xl text-white  font-semibold"><BsCoin className="text-white bg-yellow-600 rounded-full text-4xl" /></p> */}
+                <p className="text-xlfont-semibold">
+                  <MdOutlineStars 
+                className="bg-white text-yellow-600 rounded-full text-4xl"/></p>
+                
+                <ul className="flex items-center gap-5">
+                  <li>
+                  <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                  <p>photoURL</p>
-                    {/* <img src={user.photoURL} alt={user.displayName} /> */}
+                    <img src={user.photoURL} alt={user.displayName} />
                   </div>
                 </label>
-                <ul className="flex items-center gap-2">
-                  <li>
-                    <p className="text-xl  font-semibold">coin</p>
                   </li>
                   <li>
                     <button
                       className="btn border-none bg-rose-600 text-white"
-                    //   onClick={logOut}
+                      onClick={logOut}
                     >
                       LogOut
                     </button>
@@ -116,8 +121,7 @@ const Navbar = () => {
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    <p>photoURL</p>
-                    {/* <img src={user.photoURL} alt={user.displayName} /> */}
+                    <img src={user.photoURL} alt={user.displayName} />
                   </div>
                 </label>
                 <ul
@@ -130,7 +134,7 @@ const Navbar = () => {
                   <li>
                   <button
                       className="btn border-none bg-rose-600 w-2/3 mx-auto pt-3 text-white"
-                    //   onClick={logOut}
+                      onClick={logOut}
                     >
                       LogOut
                     </button>
@@ -140,11 +144,11 @@ const Navbar = () => {
               </div>
 
             </div>
-          {/* ) : ( */}
-           
-              <button className="btn border-none bg-rose-600 text-white ">Login</button>
-           
-          {/* )} */}
+          ) : (
+             
+                 <SocialLogin/>
+                 
+          )};
         </div>
       </div>
     </div>

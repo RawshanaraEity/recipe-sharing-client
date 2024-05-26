@@ -1,0 +1,113 @@
+[
+    {
+        "image": "https://i.ibb.co/jhBvtX9/homescreenify-s-A3wym-Yqya-I-unsplash.jpg",
+        "name": "Classic Spaghetti Carbonara",
+        "details": "A traditional Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+        "video": "https://example.com/videos/spaghetti_carbonara.mp4",
+        "country": "Italy",
+        "category": "Pasta",
+        "email": "chef.italiano@example.com",
+        "watchCount": 1524,
+        "purchased_by": ["user1@example.com", "user2@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/XsVyc3T/ikhsan-baihaqi-pbc2w-Xb-QYp-I-unsplash.jpg",
+        "name": "Chinese Fried Rice",
+        "details": "A savory and flavorful rice dish stir-fried with vegetables, eggs, and your choice of meat or tofu.",
+        "video": "https://example.com/videos/fried_rice.mp4",
+        "country": "China",
+        "category": "Rice",
+        "email": "chef.friedrice@example.com",
+        "watchCount": 2043,
+        "purchased_by": ["user37@example.com", "user38@example.com"]
+    },
+    {
+        "image": "hhttps://i.ibb.co/DMGKDPT/kalyani-akella-gml9g1k-RQc-M-unsplash.jpg",
+        "name": "Sushi Rolls",
+        "details": "Delicious sushi rolls with fresh fish, vegetables, and seasoned rice, wrapped in seaweed.",
+        "video": "https://example.com/videos/sushi_rolls.mp4",
+        "country": "Japan",
+        "category": "Seafood",
+        "email": "chef.japan@example.com",
+        "watchCount": 1987,
+        "purchased_by": ["user5@example.com", "user6@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/3CTLdPs/lucas-andrade-3-Uj0-Gw-Vm-Oe-Y-unsplash.jpg",
+        "name": "Butter Chicken",
+        "details": "A rich and creamy Indian curry made with tender chicken pieces in a spiced tomato sauce.",
+        "video": "https://example.com/videos/butter_chicken.mp4",
+        "country": "India",
+        "category": "Chicken",
+        "email": "chef.india@example.com",
+        "watchCount": 2154,
+        "purchased_by": ["user11@example.com", "user12@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/hCLXmYn/tempura.png",
+        "name": "Japanese Tempura",
+        "details": "Lightly battered and deep-fried seafood and vegetables, served with a dipping sauce.",
+        "video": "https://example.com/videos/tempura.mp4",
+        "country": "Japan",
+        "category": "Fried",
+        "email": "chef.tempura@example.com",
+        "watchCount": 1654,
+        "purchased_by": ["user27@example.com", "user28@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/HhLHNJh/chiken-biriyani.jpg",
+        "name": "Chicken Biryani",
+        "details": "A flavorful and aromatic Indian dish made with basmati rice, marinated chicken, and a blend of spices.",
+        "video": "https://example.com/videos/chicken_biryani.mp4",
+        "country": "India",
+        "category": "Rice",
+        "email": "chef.biryani@example.com",
+        "watchCount": 2345,
+        "purchased_by": ["user33@example.com", "user34@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/3CTLdPs/lucas-andrade-3-Uj0-Gw-Vm-Oe-Y-unsplash.jpg",
+        "name": "Crispy Chicken Fry",
+        "details": "Juicy pieces of chicken marinated in spices and fried to a golden crisp.",
+        "video": "https://example.com/videos/chicken_fry.mp4",
+        "country": "USA",
+        "category": "Fried",
+        "email": "chef.chickenfry@example.com",
+        "watchCount": 2398,
+        "purchased_by": ["user39@example.com", "user40@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/p2cBpfT/daily-slowdown-7-TOCB28rms-unsplash.jpg",
+        "name": "Beef Curry",
+        "details": "A hearty and spicy beef curry made with tender beef chunks, tomatoes, and a blend of aromatic spices.",
+        "video": "https://example.com/videos/beef_curry.mp4",
+        "country": "India",
+        "category": "Curry",
+        "email": "chef.beefcurry@example.com",
+        "watchCount": 1876,
+        "purchased_by": ["user35@example.com", "user36@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/n8QXkvF/ivan-torres-MQUqbmsz-GGM-unsplash.jpg",
+        "name": "Margherita Pizza",
+        "details": "A simple yet delicious pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves.",
+        "video": "https://example.com/videos/margherita_pizza.mp4",
+        "country": "Italy",
+        "category": "Pizza",
+        "email": "chef.pizza@example.com",
+        "watchCount": 1897,
+        "purchased_by": ["user25@example.com", "user26@example.com"]
+    },
+    {
+        "image": "https://i.ibb.co/QJTvXb0/tiramisu.jpg",
+        "name": "Classic Tiramisu",
+        "details": "A traditional Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa.",
+        "video": "https://example.com/videos/tiramisu.mp4",
+        "country": "Italy",
+        "category": "Dessert",
+        "email": "chef.dessert@example.com",
+        "watchCount": 1724,
+        "purchased_by": ["user21@example.com", "user22@example.com"]
+    }
+
+]
