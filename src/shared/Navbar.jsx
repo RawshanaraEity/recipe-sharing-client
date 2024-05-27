@@ -48,6 +48,7 @@ const Navbar = () => {
 
      {
       user? (
+        <>
         <li className="text-white text-lg font-medium mr-2">
         <NavLink
           to="/add-Recipes"
@@ -58,11 +59,21 @@ const Navbar = () => {
           Add Recipes
         </NavLink>
       </li>
+        <li className="text-white text-lg font-medium mr-2">
+        <NavLink
+          to="/coin"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-rose-600" : ""
+          }
+        >
+          Purchase Coin
+        </NavLink>
+      </li>
+      </>
       ) : (
         <li className="text-white text-lg font-medium mr-2">
         <NavLink
          onClick={handleAlert}
-          to="/add-Recipes"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-rose-600" : ""
           }
@@ -72,7 +83,7 @@ const Navbar = () => {
       </li>
       )
      }
-
+    
      
     </>
   );

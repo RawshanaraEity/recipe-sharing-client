@@ -14,6 +14,8 @@ import AuthProvider from './Providers/AuthProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import RecipeDetails from './Pages/AllRecipes/RecipeDetails';
 import { Toaster } from 'react-hot-toast';
+import PurchaseCoin from './Pages/purchaseCoin/PurchaseCoin';
+import Payment from './Pages/purchaseCoin/Payment';
 
 
 
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
       {
         path: "/recipe-details/:id",
         element: <RecipeDetails/>
+      },
+      {
+        path: "/coin",
+        element: <PurchaseCoin/>
+      },
+      {
+        path: "/payment",
+        element: <Payment/>
       }
     ]
   },
