@@ -1,4 +1,5 @@
 import SuccessStories from "../../components/SuccessStories";
+import Footer from "../../shared/Footer";
 import Banner from "./Banner";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner/>
             <SuccessStories/>
+            <Footer/>
         </div>
     );
 };

@@ -8,6 +8,7 @@ const AllRecipes = () => {
     const [category, setCategory] = useState('');
     const [country, setCountry] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
+    
 
     // Filter and search
     const filteredRecipes = recipes.filter(recipe => {

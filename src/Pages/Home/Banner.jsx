@@ -13,8 +13,23 @@ import slide3 from "../../assets/Image/slide3.webp"
 
 import { Autoplay, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const Banner = () => {
+  const {user} = useAuth()
+
+
+  const handleAlert = () => {
+    Swal.fire({
+        position: "top-end",
+        icon: "warning",
+        title: "Please login",
+        showConfirmButton: false,
+        timer: 1000,
+      })
+}
+
   useEffect(() => {
     Aos.init({
       duration: 2000,
@@ -63,11 +78,21 @@ const Banner = () => {
                    See Recipes
                   </button>
                 </Link>
-                <Link to="/add-Recipes">
-                <button className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
-                   Add Recipe
-                  </button>
-                </Link>
+               {
+                user? (
+                  <Link to="/add-Recipes">
+                  <button className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
+                     Add Recipe
+                    </button>
+                  </Link>
+                ) : (
+                 
+                  <button onClick={handleAlert} className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
+                     Add Recipe
+                    </button>
+                  
+                )
+               }
 
                 </div>
               </div>
@@ -95,11 +120,21 @@ const Banner = () => {
                    See Recipes
                   </button>
                 </Link>
-                <Link to="/add-Recipes">
-                <button className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
-                   Add Recipe
-                  </button>
-                </Link>
+                {
+                user? (
+                  <Link to="/add-Recipes">
+                  <button className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
+                     Add Recipe
+                    </button>
+                  </Link>
+                ) : (
+                 
+                  <button onClick={handleAlert} className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
+                     Add Recipe
+                    </button>
+                  
+                )
+               }
 
                 </div>
               </div>
@@ -127,11 +162,21 @@ const Banner = () => {
                    See Recipes
                   </button>
                 </Link>
-                <Link to="/add-Recipes">
-                <button className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
-                   Add Recipe
-                  </button>
-                </Link>
+                {
+                user? (
+                  <Link to="/add-Recipes">
+                  <button className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
+                     Add Recipe
+                    </button>
+                  </Link>
+                ) : (
+                 
+                  <button onClick={handleAlert} className="px-5 py-3 border-0 rounded-lg text-lg font-semibold hover:bg-rose-600 bg-transparent outline outline-red-600 text-black hover:duration-100 hover:ease-in hover:text-white">
+                     Add Recipe
+                    </button>
+                  
+                )
+               }
 
                 </div>
               </div>
