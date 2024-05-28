@@ -129,11 +129,9 @@ const Navbar = () => {
             <div>
               <div className="hidden md:block">
                 <div className="flex items-center gap-2">
-                  {/* <p className="text-xl text-white  font-semibold"><BsCoin className="text-white bg-yellow-600 rounded-full text-4xl" /></p> */}
-                  <p className="text-xlfont-semibold flex items-center gap-1">
-                  
+                  <p className="text-xl font-semibold flex items-center gap-1">
                     <MdOutlineStars className="bg-white text-yellow-600 rounded-full text-xl"/>
-                    <span className="text-white text-lg font-bold">{singleUser.coin} coin </span>
+                    <span className="text-white text-lg font-bold">{singleUser?.coin} coin </span>
                   </p>
 
                   <ul className="flex items-center gap-5">
@@ -143,7 +141,7 @@ const Navbar = () => {
                         className="btn btn-ghost btn-circle avatar"
                       >
                         <div className="w-10 rounded-full">
-                          <img src={user.photoURL} alt={user.displayName} />
+                          <img src={user?.photoURL} alt="https://i.ibb.co/WBTGdby/user.webp" />
                         </div>
                       </label>
                     </li>
@@ -159,27 +157,29 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="md:hidden">
+              <div className="md:hidden z-10">
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar"
                   >
                     <div className="w-10 rounded-full">
-                      <img src={user.photoURL} alt={user.displayName} />
+                      <img src={user?.photoURL} alt="https://i.ibb.co/WBTGdby/user.webp" />
                     </div>
                   </label>
                   <ul
                     tabIndex={0}
-                    className="menu menu-sm dropdown-content mt-3 z-[1] shadow bg-base-100 rounded-box"
+                    className="menu menu-sm dropdown-content mt-3 z-10 shadow bg-black rounded-box"
                   >
                     <li>
-                    <MdOutlineStars className="bg-white text-yellow-600 rounded-full text-xl"/>
-                    <span className="text-white text-lg font-bold">{singleUser.coin} coin </span>
+                    <p className="font-semibold">
+                    <MdOutlineStars className="bg-white text-xl text-yellow-600 rounded-full"/>
+                    <span className="text-white text-sm font-bold">{singleUser?.coin} coin </span>
+                  </p>
                     </li>
                     <li>
                       <button
-                        className="btn border-none bg-rose-600 w-2/3 mx-auto pt-3 text-white"
+                        className="btn border-none bg-rose-600 md:w-2/3 mx-auto pt-3 text-white"
                         onClick={logOut}
                       >
                         LogOut

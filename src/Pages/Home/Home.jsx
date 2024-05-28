@@ -3,11 +3,13 @@ import Footer from "../../shared/Footer";
 import Banner from "./Banner";
 
 
+
 const Home = () => {
     return (
         <div>
             <Banner/>
             <SuccessStories/>
+           
             <Footer/>
         </div>
     );

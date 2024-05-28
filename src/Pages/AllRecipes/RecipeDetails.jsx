@@ -162,7 +162,7 @@ const RecipeDetails = () => {
                         </figure>
                         <div className="flex justify-end items-center gap-6 text-green-700 text-xl">
                             <button
-                                className={liked ? "text-green-600" : "text-gray-400"}
+                                className={liked ? "text-rose-600" : "text-gray-400"}
                                 onClick={handleLikeClick}
                             >
                                 <AiFillLike />

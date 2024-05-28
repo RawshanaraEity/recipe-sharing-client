@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import useAuth from "../../Hooks/useAuth";
+import useGetUsers from "../../Hooks/useGetUsers";
 
 
 
@@ -20,7 +21,9 @@ const CheckoutForm = () => {
   const [searchParams] = useSearchParams();
   const coins = parseInt(searchParams.get("coins"));
   const price = parseInt(searchParams.get("price"));
-  console.log(coins,price);
+  const [singleUser] = useGetUsers()
+  const preCoin = singleUser?.coin
+  // console.log(coins,price);
 
   useEffect(() => {
     if (price > 0) {
@@ -82,7 +85,7 @@ const CheckoutForm = () => {
       const userInfo = {
         email: user?.email,
         name: user?.displayName,
-        coin: coins
+        coin: preCoin + coins
       };
 
       axiosPublic.patch('/users', userInfo)
