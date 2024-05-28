@@ -1,6 +1,8 @@
 import SuccessStories from "../../components/SuccessStories";
 import Footer from "../../shared/Footer";
 import Banner from "./Banner";
+import Users from "./Users";
+import DevInfo from "./DevInfo";
 
 
 
@@ -10,6 +12,8 @@ const Home = () => {
             <Banner/>
             <SuccessStories/>
            
+            <DevInfo/>
+            <Users/>
             <Footer/>
         </div>
     );
