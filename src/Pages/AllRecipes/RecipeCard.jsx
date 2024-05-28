@@ -66,11 +66,6 @@ const RecipeCard = ({ recipe }) => {
           })
             .then((response) => {
               if (response.data) {
-                // Update the user's coin balance in the frontend
-                // setUser(prevUser => ({
-                //   ...prevUser,
-                //   coins: prevUser.coins - 10,
-                // }));
     
                 Swal.fire({
                   title: "Success",

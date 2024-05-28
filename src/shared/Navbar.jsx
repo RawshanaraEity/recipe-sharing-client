@@ -10,17 +10,17 @@ import Swal from "sweetalert2";
 const Navbar = () => {
   const { logOut, user } = useAuth();
   const [singleUser] = useGetUsers();
+  console.log(singleUser.coin);
 
   const handleAlert = () => {
-
     Swal.fire({
-        position: "top-end",
-        icon: "warning",
-        title: "Please login",
-        showConfirmButton: false,
-        timer: 1000,
-      })
-}
+      position: "top-end",
+      icon: "warning",
+      title: "Please login",
+      showConfirmButton: false,
+      timer: 1000,
+    });
+  };
 
   const navLinks = (
     <>
@@ -46,45 +46,41 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-     {
-      user? (
+      {user ? (
         <>
-        <li className="text-white text-lg font-medium mr-2">
-        <NavLink
-          to="/add-Recipes"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-rose-600" : ""
-          }
-        >
-          Add Recipes
-        </NavLink>
-      </li>
-        <li className="text-white text-lg font-medium mr-2">
-        <NavLink
-          to="/coin"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-rose-600" : ""
-          }
-        >
-          Purchase Coin
-        </NavLink>
-      </li>
-      </>
+          <li className="text-white text-lg font-medium mr-2">
+            <NavLink
+              to="/add-Recipes"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-rose-600" : ""
+              }
+            >
+              Add Recipes
+            </NavLink>
+          </li>
+          <li className="text-white text-lg font-medium mr-2">
+            <NavLink
+              to="/coin"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-rose-600" : ""
+              }
+            >
+              Purchase Coin
+            </NavLink>
+          </li>
+        </>
       ) : (
         <li className="text-white text-lg font-medium mr-2">
-        <NavLink
-         onClick={handleAlert}
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-rose-600" : ""
-          }
-        >
-          Add Recipes
-        </NavLink>
-      </li>
-      )
-     }
-    
-     
+          <NavLink
+            onClick={handleAlert}
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "text-rose-600" : ""
+            }
+          >
+            Add Recipes
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -130,8 +126,10 @@ const Navbar = () => {
               <div className="hidden md:block">
                 <div className="flex items-center gap-2">
                   <p className="text-xl font-semibold flex items-center gap-1">
-                    <MdOutlineStars className="bg-white text-yellow-600 rounded-full text-xl"/>
-                    <span className="text-white text-lg font-bold">{singleUser?.coin} coin </span>
+                    <MdOutlineStars className="bg-white text-yellow-600 rounded-full text-xl" />
+                    <span className="text-white text-lg font-bold">
+                      {singleUser?.coin} coin
+                    </span>
                   </p>
 
                   <ul className="flex items-center gap-5">
@@ -141,7 +139,10 @@ const Navbar = () => {
                         className="btn btn-ghost btn-circle avatar"
                       >
                         <div className="w-10 rounded-full">
-                          <img src={user?.photoURL} alt="https://i.ibb.co/WBTGdby/user.webp" />
+                          <img
+                            src={user?.photoURL}
+                            alt="https://i.ibb.co/WBTGdby/user.webp"
+                          />
                         </div>
                       </label>
                     </li>
@@ -164,7 +165,10 @@ const Navbar = () => {
                     className="btn btn-ghost btn-circle avatar"
                   >
                     <div className="w-10 rounded-full">
-                      <img src={user?.photoURL} alt="https://i.ibb.co/WBTGdby/user.webp" />
+                      <img
+                        src={user?.photoURL}
+                        alt="https://i.ibb.co/WBTGdby/user.webp"
+                      />
                     </div>
                   </label>
                   <ul
@@ -172,10 +176,12 @@ const Navbar = () => {
                     className="menu menu-sm dropdown-content mt-3 z-10 shadow bg-black rounded-box"
                   >
                     <li>
-                    <p className="font-semibold">
-                    <MdOutlineStars className="bg-white text-xl text-yellow-600 rounded-full"/>
-                    <span className="text-white text-sm font-bold">{singleUser?.coin} coin </span>
-                  </p>
+                      <p className="font-semibold">
+                        <MdOutlineStars className="bg-white text-xl text-yellow-600 rounded-full" />
+                        <span className="text-white text-sm font-bold">
+                          {singleUser?.coin} coin
+                        </span>
+                      </p>
                     </li>
                     <li>
                       <button

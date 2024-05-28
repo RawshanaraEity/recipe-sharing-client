@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-    baseURL: 'http://localhost:5000/'
+    baseURL: 'https://recipe-sharing-server-fawn.vercel.app'
 })
 
 const useAxiosPublic = () => {
